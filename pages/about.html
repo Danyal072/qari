@@ -16,6 +16,82 @@
 </head>
 <body>
 
+    <div id="header">
+        <!-- Top Navbar -->
+      <nav class="bg-gray-800 text-white">
+          <div class="container mx-auto flex justify-between items-center py-2 px-4">
+            <!-- Left: Contact Details -->
+            <div class="flex space-x-4">
+              <span>WhatsApp: +1234567890</span>
+              <span class="max-[768px]:hidden">Email: info@example.com</span>
+            </div>
+            <!-- Right: Social Media Icons -->
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-gray-400">
+                  <img src="https://img.icons8.com/?size=24&id=118467&format=png&color=ffffff" alt="">
+              </a>
+              <a href="#" class="hover:text-gray-400">
+                  <img src="https://img.icons8.com/?size=24&id=59813&format=png&color=ffffff" alt="">
+              </a>
+              <a href="#" class="hover:text-gray-400">
+                <img src="https://img.icons8.com/?size=24&id=8808&format=png&color=ffffff" alt="">
+              </a>
+            </div>
+          </div>
+        </nav>
+        
+        <!-- Bottom Navbar -->
+        <nav class="bg-white shadow-md">
+          <div class="container mx-auto flex justify-between items-center py-4 px-4">
+            <!-- Logo -->
+            <div class="text-xl font-bold">
+              <a href="#"><img src="../c.png" width="60" height="60" alt=""></a>
+            </div>
+            <!-- Menu -->
+            <ul class="hidden md:flex space-x-6">
+              <li><a href="/" class="hover:text-blue-600">Home</a></li>
+              <li><a href="/pages/about.html" class="hover:text-blue-600">About us</a></li>
+              <li><a href="/pages/service.html" class="hover:text-blue-600">Our Services</a></li>
+              <li><a href="#" class="hover:text-blue-600">Packages</a></li>
+              <li><a href="#" class="hover:text-blue-600">Payment</a></li>
+              <li><a href="#" class="hover:text-blue-600">Careers</a></li>
+              <li><a href="#" class="hover:text-blue-600">Download</a></li>
+              <li><a href="#" class="hover:text-blue-600">Blog</a></li>
+              <li><a href="/pages/contact.html" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                <img src="https://img.icons8.com/?size=40&id=Y9aaMCohZ2Md&format=png&color=000000" alt="">
+              </button>
+            </div>
+            <div id="cross-btn" class="hidden">
+              <button class="text-gray-800 focus:outline-none">
+                <img src="https://img.icons8.com/?size=40&id=3vXgi59A8WzS&format=png&color=000000" alt="">
+              </button>
+            </div>
+          </div>
+        
+          <!-- Mobile Menu -->
+          <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="space-y-4 py-4 text-center">
+              <li><a href="/" class="block px-4 hover:text-blue-600">Home</a></li>
+              <li><a href="/pages/about.html" class="block px-4 hover:text-blue-600">About us</a></li>
+              <li><a href="/pages/service.html" class="block px-4 hover:text-blue-600">Our Services</a></li>
+              <li><a href="#" class="block px-4 hover:text-blue-600">Packages</a></li>
+              <li><a href="#" class="block px-4 hover:text-blue-600">Payment</a></li>
+              <li><a href="#" class="block px-4 hover:text-blue-600">Careers</a></li>
+              <li><a href="#" class="block px-4 hover:text-blue-600">Download</a></li>
+              <li><a href="#" class="block px-4 hover:text-blue-600">Blog</a></li>
+              <li><a href="/pages/contact.html" class="block px-4 hover:text-blue-600">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+
+    </div>
+
+
     <section class="bg-gray-900 text-white py-8 flex flex-col items-center justify-center w-full">
         <div class="max-w-7xl mx-auto px-4 w-full text-center">
             <h1 class="text-4xl font-bold mb-4">About Us</h1>
@@ -83,6 +159,31 @@
             </div>
         </div>
     </section>
+
+    <script>
+          function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const crossBtn = document.getElementById('cross-btn');
+    
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      menu.classList.add('block');
+      menuBtn.classList.add('hidden');
+      crossBtn.classList.remove('hidden');
+    } else {
+      menu.classList.remove('block');
+      menu.classList.add('hidden');
+      menuBtn.classList.remove('hidden');
+      crossBtn.classList.add('hidden');
+    }
+  }
+
+  // Add event listeners to the buttons
+  document.getElementById('menu-btn').addEventListener('click', toggleMenu);
+  document.getElementById('cross-btn').addEventListener('click', toggleMenu);
+    </script>
+
 
 </body>
 </html>
