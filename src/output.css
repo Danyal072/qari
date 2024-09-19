@@ -646,6 +646,10 @@ video {
   display: block;
 }
 
+.\!flex {
+  display: flex !important;
+}
+
 .flex {
   display: flex;
 }
@@ -656,6 +660,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .h-16 {
